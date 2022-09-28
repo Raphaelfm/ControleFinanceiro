@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ControleDeFinancas.Models.ContasPagar>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" href="~/contasPagar/css/bootstrap.css" asp-append-version="true" />
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create"><button type="button" class="btn btn-primary">Criar</button></a>    
+    
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ContaPagarIdentificacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrevisaoPagamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContaPagarIdentificacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrevisaoPagamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacao)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ContaPagarId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ContaPagarId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ContaPagarId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
