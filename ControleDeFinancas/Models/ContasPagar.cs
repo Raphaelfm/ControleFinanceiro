@@ -17,6 +17,8 @@ namespace ControleDeFinancas.Models
 
         [DisplayName("Valor da conta R$")]
         [Required(ErrorMessage = "É necessário informar o valor da conta a pagar.")]
+        [Column(TypeName = "decimal(10,2)")]
+        [Range(0, 999999999.99, ErrorMessage = "O preço deve estar entre 1 e 999999999,99")]
         public double Valor { get; set; }
 
         [Required(ErrorMessage = "A previsão de pagamento deve ser preenchida com a data prevista.")]

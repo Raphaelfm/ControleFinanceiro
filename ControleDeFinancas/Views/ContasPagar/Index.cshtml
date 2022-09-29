@@ -44,7 +44,7 @@
                     @Html.DisplayFor(modelItem => item.PrevisaoPagamento)
                     </td>
                     <td>
-                    @Html.DisplayFor(modelItem => item.Valor)
+                    @(item.Valor.ToString("c"))
                     </td>
                     <td>
                     @Html.DisplayFor(modelItem => item.Status)
@@ -53,9 +53,9 @@
                     @Html.DisplayFor(modelItem => item.Observacao)
                     </td>
                     <td>                    
-                            <a asp-action="Edit" asp-route-id="@item.ContaPagarId" type="button" class="btn btn-secondary">Editar</a>
+                        <a asp-action="Edit" asp-route-id="@item.ContaPagarId" type="button" class="btn btn-secondary">Editar</a>
                         <a asp-action="Details" asp-route-id="@item.ContaPagarId" type="button" class="btn btn-info">Detalhes</a>|
-                        <a asp-action="Delete" asp-route-id="@item.ContaPagarId" type="button" class="btn btn-danger">Delete</a>
+                        <a asp-action="Delete" asp-route-id="@item.ContaPagarId" type="button" class="btn btn-danger">Deletar</a>
                     </td>
                 </tr>
         }

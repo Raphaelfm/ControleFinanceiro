@@ -86,7 +86,7 @@ namespace ControleDeFinancas.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ContaPagarId,ContaPagarIdentificacao,PrevisaoPagamento,Status,Observacao")] ContasPagar contasPagar)
+        public async Task<IActionResult> Edit(int id, [Bind("ContaPagarId,ContaPagarIdentificacao,PrevisaoPagamento, Valor,Status,Observacao")] ContasPagar contasPagar)
         {
             if (id != contasPagar.ContaPagarId)
             {
