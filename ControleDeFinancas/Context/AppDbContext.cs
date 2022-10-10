@@ -11,5 +11,6 @@ namespace ControleDeFinancas.Context
         }
 
         public DbSet<ContasPagar> contasPagar { get; set; }
+        public DbSet<ContasReceber> contasReceber { get; set; }
     }
 }
